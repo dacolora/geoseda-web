@@ -56,8 +56,6 @@ a{color:inherit;text-decoration:none}
 .brand svg{width:28px;height:28px}
 .wm{display:inline-flex;align-items:baseline}
 .wm-geo{font-family:var(--serif);font-style:italic;font-weight:400;font-size:19px;letter-spacing:0;color:var(--lime);margin-right:.08em}
-.soon{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);padding:0 6px}
-.soon i{width:6px;height:6px;border-radius:50%;background:var(--lime);box-shadow:0 0 10px var(--lime);animation:pulse 2.4s infinite}
 .links{display:flex;gap:34px;font-size:14px;color:var(--muted)}
 .links a{position:relative;transition:color .3s}
 .links a:hover{color:var(--text)}
@@ -245,7 +243,6 @@ footer .norm{font-family:var(--mono);font-size:11.5px}
 
 @media (max-width:980px){
   .links{display:none}
-  .soon{display:none}
   .eyebrow{align-items:flex-start}.eyebrow .dot{flex:none;margin-top:.42em}
   .vhead{grid-template-columns:1fr;gap:20px}
   .cgrid{grid-template-columns:1fr}.layers{display:none}
@@ -279,7 +276,7 @@ footer .norm{font-family:var(--mono);font-size:11.5px}
     <span class="wm"><span class="wm-geo">geo</span>SEDA</span>
   </a>
   <div class="links"><a href="#validar">Validación</a><a href="#crear">Creación</a><a href="#modelo">Modelo ANLA</a><a href="#confianza">Confidencialidad</a></div>
-  <div class="navcta"><span class="soon"><i></i>Muy pronto</span><a class="btn btn-primary btn-sm" href="#validar">Ver cómo funciona</a></div>
+  <div class="navcta"><a class="btn btn-ghost btn-sm" href="https://app.geoseda.com/login">Entrar</a><a class="btn btn-primary btn-sm" href="https://app.geoseda.com/register">Crear cuenta</a></div>
 </nav>
 
 <header class="hero" id="hero">
@@ -293,8 +290,8 @@ footer .norm{font-family:var(--mono);font-size:11.5px}
     </h1>
     <p class="lede">GeoSEDA revisa y construye tu GDB contra el modelo oficial de la Res. 2182 de 2016: estructura, dominios, atributos, topología y coordenadas en Origen Nacional. Capa por capa, campo por campo.</p>
     <div class="hero-ctas">
-      <a class="btn btn-primary" href="#validar">Mira cómo valida <span class="arr">→</span></a>
-      <a class="btn btn-ghost" href="#crear">Mira cómo arma una GDB</a>
+      <a class="btn btn-primary" href="https://app.geoseda.com/register">Crear cuenta <span class="arr">→</span></a>
+      <a class="btn btn-ghost" href="#validar">Mira cómo valida</a>
     </div>
   </div>
   <div class="readout" id="readout">
@@ -406,10 +403,10 @@ footer .norm{font-family:var(--mono);font-size:11.5px}
 <section class="final">
   <canvas id="topo2"></canvas>
   <div class="wrap reveal">
-    <div class="kicker" style="justify-content:center">Muy pronto</div>
+    <div class="kicker" style="justify-content:center">Para consultoras y equipos SIG</div>
     <h2>Entrega a la ANLA <span class="it">con la certeza</span> de que está bien.</h2>
-    <p class="sub">Estamos preparando la apertura de GeoSEDA para consultoras y equipos SIG.</p>
-    <div class="ctas"><a class="btn btn-primary" href="#validar">Mira cómo valida <span class="arr">→</span></a><a class="btn btn-ghost" href="#crear">Mira cómo arma una GDB</a></div>
+    <p class="sub">Crea la cuenta de tu equipo y revisa tu GDB contra el modelo oficial antes de radicar.</p>
+    <div class="ctas"><a class="btn btn-primary" href="https://app.geoseda.com/register">Crear cuenta <span class="arr">→</span></a><a class="btn btn-ghost" href="https://app.geoseda.com/login">Entrar</a></div>
   </div>
 </section>
 

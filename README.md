@@ -23,7 +23,9 @@ Este repositorio es público. No van aquí datos de clientes, geodatabases ni na
 | A | @ | 185.199.111.153 |
 | CNAME | www | dacolora.github.io |
 
-La plataforma (validación y creación de GDB) se publica aparte y usará `app.geoseda.com` cuando salga a producción.
+La plataforma (validación y creación de GDB) se publica aparte en `app.geoseda.com`. Los botones «Entrar» y «Crear
+cuenta» de la landing llevan a `https://app.geoseda.com/login` y `/register`; no abren hasta que la plataforma
+salga a producción y exista el registro DNS de `app`.
 
 ## Probar en local
 
