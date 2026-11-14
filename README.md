@@ -11,6 +11,7 @@ Este repositorio es público. No van aquí datos de clientes, geodatabases ni na
 | `index.html` | La landing completa: estilos y animaciones (curvas de nivel en canvas) dentro del mismo archivo. |
 | `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png` | Íconos de la pestaña y del iPhone. |
 | `og.jpg` | Imagen de 1200×630 que se ve al compartir el enlace (WhatsApp, LinkedIn). |
+| `404.html` | Lo que muestra GitHub Pages en una ruta que no existe (también `/login` y `/register` mientras la plataforma no está en producción). |
 | `CNAME` | Dominio propio para GitHub Pages (`geoseda.com`). |
 
 ## DNS (GoDaddy)
@@ -23,9 +24,12 @@ Este repositorio es público. No van aquí datos de clientes, geodatabases ni na
 | A | @ | 185.199.111.153 |
 | CNAME | www | dacolora.github.io |
 
-La plataforma (validación y creación de GDB) se publica aparte en `app.geoseda.com`. Los botones «Entrar» y «Crear
-cuenta» de la landing llevan a `https://app.geoseda.com/login` y `/register`; no abren hasta que la plataforma
-salga a producción y exista el registro DNS de `app`.
+Todo GeoSEDA vive en `geoseda.com`, sin subdominios. La plataforma (validación y creación de GDB, en el repo
+privado `seda-gdb`, carpeta `plataforma/`) ya trae esta misma landing como su página de inicio (`frontend/src/inicio/`):
+cuando salga a producción, `geoseda.com` apuntará a su servidor y este repositorio y GitHub Pages dejan de servirla.
+Mientras tanto los botones «Entrar» y «Crear cuenta» llevan a `/login` y `/register`, que aquí no existen: GitHub
+Pages muestra `404.html`, que avisa que la plataforma abre muy pronto. Un cambio a la landing se hace en los dos
+lugares hasta entonces.
 
 ## Probar en local
 
