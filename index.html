@@ -270,9 +270,10 @@ footer .norm{font-family:var(--mono);font-size:11.5px}
   .step h3{font-size:24px}
   .step p{max-height:none}
   .chips{max-height:none;margin-top:14px}
-  .scene{height:340px;margin-top:16px;place-items:center start}.stack{width:170px;height:170px;margin-left:24px}
+  .scene{height:340px;margin-top:16px;place-items:center}.stack{width:150px;height:150px}
   .tag{right:-22px;font-size:10.5px}.tag .xtra{display:none}
-  .gdbtag{bottom:0}
+  .gdbtag{bottom:0;left:0;right:0;margin:0 auto;width:fit-content;max-width:100%;white-space:normal;transform:translateY(20px)}
+  .gdbtag.on{transform:none}
   .numbers{padding:88px 0}
   .nrow{grid-template-columns:repeat(2,1fr);margin-top:44px}.ncell{margin-bottom:30px}
   .ncell:nth-child(2n){border-right:0;margin-right:0;padding-right:0}
@@ -615,7 +616,9 @@ function scene(){
   const zs=mix(-2*g0-40,2*g0+40,k3);scan.style.transform=`translateZ(${zs}px)`;scan.style.opacity=(k3>0&&k3<1)?1:0;
   gdb.style.opacity=k4;gdb.style.transform=`translateZ(${mix(0,30,k4)}px)`;
   gtag.classList.toggle('on',p>.9);
-  stack.style.transform=`rotateX(${mix(58,52,k4)}deg) rotateZ(${mix(-40,-44,p)}deg) scale(${mix(1,1.08,k4)})`;
+  // en el celular la pila va centrada; se corre a la izquierda mientras se ven los nombres de las capas
+  const dx=m?-Math.max(0,240-innerWidth/2)*(1-k4):0;
+  stack.style.transform=`translateX(${dx}px) rotateX(${mix(58,52,k4)}deg) rotateZ(${mix(-40,-44,p)}deg) scale(${mix(1,1.08,k4)})`;
 }
 addEventListener('scroll',scene,{passive:true});addEventListener('resize',scene);scene();
 })();
