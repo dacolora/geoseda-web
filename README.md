@@ -1,5 +1,7 @@
 # geoseda-web
 
+> **Archivado el 2026-11-14.** geoseda.com lo sirve la plataforma GeoSEDA desde su propio servidor, y la landing vive en la plataforma (`frontend/src/inicio/`). Este repositorio queda solo como historia: GitHub Pages está apagado y ya no se publica nada desde aquí.
+
 Página pública de GeoSEDA en <https://geoseda.com>: un HTML estático publicado con GitHub Pages.
 
 Este repositorio es público. No van aquí datos de clientes, geodatabases ni nada confidencial.
